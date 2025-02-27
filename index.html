@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varukorg</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <button id="tillBaka" onclick="tillBaka()"> < Tillbaka</button>
+            <span>Varukorg (1)</span>
+            <span class="icon">🔗</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="login">
+            <p>Har ett konto? <a href="#">Logga in</a> för snabbare utcheckning.</p>
+        </div>
+
+        <div class="cart-item">
+            <img src="steve.jpg" alt="Steve Madden">
+            <div class="item-details">
+                <h2>Steve Madden</h2>
+                <p>Bclarkes Crossbody bag - Crossbody Bags</p>
+                <p>BLACK SILVER</p>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <p class="price">1449 kr</p>
+            </div>
+            <button class="delete">🗑️</button>
+        </div>
+
+        <div class="discount">
+            <label for="rabattkod">Rabattkod</label>
+            <input type="text" id="rabattkod" placeholder="Skriv in rabattkod">
+            <button>Använd</button>
+        </div>
+
+        <div class="giftcard">
+            <label for="presentkort">Presentkort/Tillgodobevis</label>
+            <input type="text" id="presentkort" placeholder="Skriv in ditt presentkort/tillgodobevis här">
+            <button>Använd</button>
+        </div>
+
+        <div class="payment">
+            <p>Ordinarie pris: <span>1449 kr</span></p>
+            <p>Summa: <span class="total">1449 kr</span></p>
+            <button class="checkout">Kassan</button>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.checkout').addEventListener('click', function() {
+            window.location.href = 'last.html';
+        });
+        function tillBaka () {
+            window.open("https://www.boozt.com" , "_blank")
+        }
+    </script>
+
+</body>
+</html>

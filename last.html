@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Boozt</title>
+    <link rel="stylesheet" href="last.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="logo">Boozt</h1>
+
+        <div class="checkout">
+            <div class="billing">
+                <h2>Faktura & leveransinformation</h2>
+
+                <form>
+                    <label for="email">Mejladress * </label>
+                    <input type="email" id="email" required>
+
+                    <label for="firstname">Förnamn *</label>
+                    <input type="text" id="firstname" required>
+
+                    <label for="lastname">Efternamn * </label>
+                    <input type="text" id="lastname" required>
+
+                    <label for="address">Gatuadress *</label>
+                    <input type="text" id="address" required>
+
+                    <div class="row">
+                        <div>
+                            <label for="zipcode">Postnummer *</label>
+                            <input type="text" id="zipcode" required>
+                        </div>
+                        <div>
+                            <label for="city">Postort *</label>
+                            <input type="text" id="city" required>
+                        </div>
+                    </div>
+
+                    <label for="country">Sverige</label>
+                    <select id="country" disabled>
+                        <option>Sverige</option>
+                    </select>
+
+                    <div class="row">
+                        <div>
+                            <label for="phonecode">Landsnummer (+46)</label>
+                            <input type="text" id="phonecode" value="+46" disabled>
+                        </div>
+                        <div>
+                            <label for="mobile">Mobil *</label>
+                            <input type="text" id="mobile" required>
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="sameAddress" checked>
+                        <label for="sameAddress">Skicka till fakturaadressen</label>
+                    </div>
+
+                    <button type="submit">Fortsätt till leverans</button>
+                </form>
+            </div>
+            <div class="order-summary">
+                <h3>Beställningssumma</h3>
+                <p>Ordinarie pris: <span>1449 kr</span></p>
+                <p class="discount">Rabatt: <span>-200 kr</span></p>
+                <p>Frakt och hantering: <span>0 kr</span></p>
+                <hr>
+                <p class="total">Totalt pris (inkl moms): <span>1249 kr</span></p>
+
+                <div class="discount-box">
+                    <h4>Rabattkod</h4>
+                    <input type="text" placeholder="Ange kod">
+                    <button>Använd</button>
+                </div>
+
+                <div class="gift-card">
+                    <h4>Presentkort/Tillgodobevis</h4>
+                    <input type="text" placeholder="Presentkort/Tillgodobevis">
+                    <button>Använd</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - 20250206</title>
+
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .form {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .one {
+            background: cornflowerblue;
+        }
+        .two {
+            background: #ccc;
+            border-radius: 100%;
+        }
+        .tree {
+            display: flex;
+            gap: 1rem;
+            border: transparent;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 100%;
+            }
+            &::before {
+                background: cornflowerblue;
+            }
+            &::after {
+                background: rebeccapurple;
+            }
+        }
+        .four {
+            width: 0;
+            height: 0;
+            border-top: 0;
+            border-right: 50px solid transparent;
+            border-left: 50px solid transparent;
+            border-bottom: 100px solid #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="form"></div>
+    <script>
+        const car = 280000;
+        const discount = 70000;
+        const insurance = (1024 * 5);
+        const total = ((car - discount) + insurance);
+
+        //console.log(total);
+     
+        if (total > 302000) {
+            one();
+        } else if (total == 107000) {
+            two();
+        } else if (total >= 210000) {
+            tree();
+        } else {
+            four();
+        }
+
+        function one () {
+            document.querySelector('.form').classList.add('one');
+        }
+        function two () {
+            document.querySelector('.form').classList.add('two');
+        }
+        function tree () {
+            document.querySelector('.form').classList.add('tree');
+        }
+        function four () {
+            document.querySelector('.form').classList.add('four');
+        }
+    </script>
+</body>
+</html>
